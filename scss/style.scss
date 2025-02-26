@@ -1,0 +1,23 @@
+@import '_variables.scss';
+@import '_header.scss';
+@import '_hero.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Raleway", serif;
+    min-width: 320px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
