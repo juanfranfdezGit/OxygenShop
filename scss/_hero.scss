@@ -2,13 +2,13 @@
     text-align: center;
     margin-top: 170px;
 
-    h2 {
+    .hero__title {
         font-weight: 400;
         font-size: 35px;
         line-height: 41px;
     }
 
-    p {
+    .hero__description {
         width: 308px;
         text-align: center;
         margin: 20px auto;
@@ -17,7 +17,7 @@
         font-size: 16px;
     }
 
-    button {
+    .hero__button {
         width: 310px;
         height: 67px;
         background: $primaryColor;
@@ -25,10 +25,15 @@
         border-radius: 48px;
         border: none;
         color: $white;
-        margin-top: 20px;
+        margin-top: 20px;  
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
-    img {
+    
+    .hero__image {
         margin-top: 50px;
         width: 779px;
         margin-left: -180px;
@@ -37,15 +42,15 @@
 
 @media (min-width: 400px) {
     .hero {
-        h2 {
+        .hero__title {
             font-size: 49px;
             line-height: 57px;  
         }
 
-        img {
+        .hero__image {
             width: 100%;
             margin-left: 0px;
         }
-          
+        
     }
 }

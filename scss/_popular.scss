@@ -3,7 +3,7 @@
 .popular {
     margin-bottom: 100px;
 
-    h2 {
+    .popular__title {
         font-weight: 300;
         font-size: 30px;
         line-height: 35px;
@@ -12,84 +12,87 @@
         margin: 0 auto;
     }
     
-    .data {
-        width: 120px;
-        margin: 25px auto;
-        text-align: center;
+    .popular__datas {        
+        .popular__datas-item {
+            width: 120px;
+            margin: 25px auto;
+            text-align: center;
+        
+            .popular__datas-icon {
+                position: relative;
+        
+                .popular__datas-icon-back, .popular__datas-icon-back02, .popular__datas-icon-back03 {
+                    position: absolute;
+                    width: 62px;
+                    height: 62px;
+                    border-radius: 50%;
+                    @include set-background($secondaryColor);
+                    left: 20px;
+                    top: 0;
+                }
+        
+                .popular__datas-icon-back02 {
+                    @include set-background($primaryColor);
+                }
+        
+                .popular__datas-icon-back03 {
+                    @include set-background($thirdColor);
+                }
     
-        .ico {
-            position: relative;
-    
-            div {
-                position: absolute;
-                width: 62px;
-                height: 62px;
-                border-radius: 50%;
-                @include set-background($secondaryColor);
-                left: 20px;
-                top: 0;
+                .popular__datas-icon-image, .popular__datas-icon-image02, .popular__datas-icon-image03 {
+                    position: absolute;
+                    z-index: 2;
+                }
+        
+                .popular__datas-icon-image {
+                    width: 44px;
+                    right: 20px;
+                }
+        
+                .popular__datas-icon-image02, .popular__datas-icon-image03 {
+                    width: 60px;
+                    right: 20px;
+                    top: 10px;
+                }
+        
+                .popular__datas-icon-image03 {
+                    width: 44px;
+                }
             }
-    
-            div.back02 {
-                @include set-background($primaryColor);
+        
+            .popular__datas-number {
+                padding-top: 80px;
+                font-size: 20px;
+                line-height: 24px;
+                font-weight: 800;
+                letter-spacing: 6px;
             }
-    
-            div.back03 {
-                @include set-background($thirdColor);
-            }
-
-            .img01, .img02, .img03 {
-                position: absolute;
-                z-index: 2;
-            }
-    
-            .img01 {
-                width: 44px;
-                right: 20px;
-            }
-    
-            .img02, .img03 {
-                width: 60px;
-                right: 20px;
-                top: 10px;
-            }
-    
-            .img03 {
-                width: 44px;
+        
+            .popular__datas-description {
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 20px;
+                color: $grey;
+                padding-top: 19px;
             }
         }
     
-        h3 {
-            padding-top: 80px;
-            font-size: 20px;
-            line-height: 24px;
-            font-weight: 800;
-            letter-spacing: 6px;
-        }
-    
-        p {
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 20px;
-            color: $grey;
-            padding-top: 19px;
-        }
     }
 }
 
 @media (min-width: 400px) {
     .popular {
-        h2 {
+        .popular__title {
             width: 716px;
         }
 
-        .datas {
+        .popular__datas {
             display: flex;
             margin: 100px 25vw;
             gap: 180px;
 
-            .data {
-                .img03 {
+            .popular__datas-icon {
+                .popular__datas-icon-image03 {
                     right: 10px;
                 }
             }

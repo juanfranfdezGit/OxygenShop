@@ -10,14 +10,14 @@ header {
     background: $white;
     z-index: 5;
 
-    h1 {
+    .header__title {
         color: $primaryColor;
         font-weight: 300;
         font-size: 32px;
         line-height: 37px;
     }
 
-    .hamburguer {
+    .header__hamburguer {
         position: absolute;
         right: 30px;
         top: 30px;
@@ -32,34 +32,34 @@ header {
         }
     }
 
-    nav{
+    .header__nav{
         display: none;
     }
 }
 
 @media (min-width: 400px) {
     header {
-        h1 {
+        .header__title {
             margin-left: 100px;
         }
         
-        .hamburguer {
+        .header__hamburguer {
             span {
                 display: none;
             }
         }
 
-        nav {
+        .header__nav {
             display: block;
             position: absolute;
             right: 110px;
             top: 30px; 
 
-            ul {
+            .header__menu {
                 display: inline-flex;
                 gap: 40px;
 
-                li.active {
+                .header__menu-item.header__menu-item--active {
                     display: block;
                     border-bottom: 4px solid $primaryColor;
                     height: 40px;
@@ -75,7 +75,7 @@ header {
                     color: $grey;
                 }
 
-                a.active {
+                .header__menu-item.header__menu-item--active a {
                     color: $black;
                 }
             }
