@@ -1,4 +1,8 @@
+@import '_mixin';
+
 .popular {
+    margin-bottom: 100px;
+
     h2 {
         font-weight: 300;
         font-size: 30px;
@@ -21,29 +25,30 @@
                 width: 62px;
                 height: 62px;
                 border-radius: 50%;
-                background: #FB3B64;
+                @include set-background($secondaryColor);
                 left: 20px;
                 top: 0;
             }
     
             div.back02 {
-                background: #08A6E4;
+                @include set-background($primaryColor);
             }
     
             div.back03 {
-                background: #55DFB4;
+                @include set-background($thirdColor);
+            }
+
+            .img01, .img02, .img03 {
+                position: absolute;
+                z-index: 2;
             }
     
             .img01 {
-                position: absolute;
-                z-index: 20;
                 width: 44px;
                 right: 20px;
             }
     
             .img02, .img03 {
-                position: absolute;
-                z-index: 20;
                 width: 60px;
                 right: 20px;
                 top: 10px;
