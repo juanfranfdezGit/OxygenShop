@@ -180,7 +180,7 @@ header nav {
   }
   .popular .datas {
     display: flex;
-    margin: 100px 410px;
+    margin: 100px 25vw;
     gap: 180px;
   }
   .popular .datas .data .img03 {
@@ -195,6 +195,7 @@ header nav {
   position: relative;
   margin: 40px auto;
   padding: 170px 20px 20px 20px;
+  border-radius: 5px;
 }
 .cards .card .cardback1, .cards .card .cardback2, .cards .card .cardback3 {
   position: absolute;
@@ -223,6 +224,8 @@ header nav {
   background: #55DFB4;
   bottom: -80px;
   left: 0;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
 }
 .cards .card img {
   position: absolute;
@@ -275,7 +278,7 @@ header nav {
     height: 320px;
   }
   .cards .card .cardback3 {
-    width: 40%;
+    width: 29vw;
     height: 100%;
     bottom: 0;
     left: 44vw;
@@ -322,6 +325,140 @@ header nav {
   }
   .cards .card:nth-child(2) {
     justify-content: flex-end;
+  }
+  .cards .card:nth-child(2) .cardData h2 {
+    width: 250px;
+  }
+  .cards .card:last-child {
+    width: 620px;
+    right: 16.5vw;
+  }
+}
+.pricing {
+  padding-top: 120px;
+}
+.pricing h2 {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: -60px;
+}
+.pricing .pricingCard {
+  width: 293px;
+  height: 275px;
+  border: 1px solid #FB3B64;
+  border-radius: 18px;
+  margin: 80px auto;
+  position: relative;
+}
+.pricing .pricingCard .price {
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  text-align: center;
+}
+.pricing .pricingCard .price h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #13253B;
+}
+.pricing .pricingCard .price p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  line-height: 64px;
+  font-weight: 300;
+  color: #FB3B64;
+}
+.pricing .pricingCard .price span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+}
+.pricing .pricingCard .pricingInfo {
+  position: absolute;
+  top: 30px;
+  right: 10px;
+}
+.pricing .pricingCard .pricingInfo ul li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
+  margin-bottom: 20px;
+}
+.pricing .pricingCard .pricingInfo ul li.include {
+  list-style-image: url(../assets/Checkbox.png);
+}
+.pricing .pricingCard .pricingInfo ul li.nonInclude {
+  list-style-image: url(../assets/Cross.png);
+}
+.pricing .pricingCard button {
+  position: absolute;
+  bottom: -25px;
+  background: #FB3B64;
+  color: #fff;
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  border: none;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+}
+.pricing .pricingCard:nth-child(2) {
+  border: 1px solid #08A6E4;
+  transform: scale(1.1);
+  box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
+}
+.pricing .pricingCard:nth-child(2) .price {
+  left: 20px;
+}
+.pricing .pricingCard:nth-child(2) .price p {
+  color: #08A6E4;
+}
+.pricing .pricingCard:nth-child(2) button {
+  background: #08A6E4;
+  box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
+}
+.pricing .pricingCard:nth-child(3) {
+  border: 1px solid #55DFB4;
+}
+.pricing .pricingCard:nth-child(3) .price {
+  left: 30px;
+}
+.pricing .pricingCard:nth-child(3) .price p {
+  color: #55DFB4;
+}
+.pricing .pricingCard:nth-child(3) button {
+  background: #55DFB4;
+}
+
+@media (min-width: 400px) {
+  .pricing .pricingCards {
+    margin: 20px 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing .pricingCards .pricingCard {
+    width: 24vw;
+    height: 65vh;
+  }
+  .pricing .pricingCards .pricingCard .price {
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
+  .pricing .pricingCards .pricingInfo {
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .pricing .pricingCards .pricingInfo ul {
+    text-align: center;
   }
 }
 * {

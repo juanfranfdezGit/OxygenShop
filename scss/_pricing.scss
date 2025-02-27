@@ -1,0 +1,158 @@
+@import '_mixin';
+@import '_variables';
+
+.pricing {
+    padding-top: 120px;
+
+    h2 {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 42px;
+        text-align: center;
+        margin-bottom: -60px;
+    }
+
+    .pricingCard {
+        width: 293px;
+        height: 275px;
+        @include set-border(1px, $secondaryColor);
+        border-radius: 18px;
+        margin: 80px auto;
+        position: relative;
+
+        .price {
+            position: absolute;
+            top: 80px;
+            left: 50px;
+            text-align: center;
+
+            h3 {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                color: #13253B;
+            }
+
+            p {
+                font-family: "Open Sans", sans-serif; 
+                font-size: 46px;
+                line-height: 64px;
+                font-weight: 300;
+                @include set-color($secondaryColor);
+            }
+
+            span {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14px;
+            }
+        }
+
+        .pricingInfo {
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            
+            ul {
+                li {
+                    font-family: "Open Sans", sans-serif; 
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 19px;
+                    margin-bottom: 20px;
+                }
+
+                li.include {
+                    list-style-image: url(../assets/Checkbox.png);
+                }
+
+                li.nonInclude {
+                    list-style-image: url(../assets/Cross.png);
+                }
+            }
+        }
+
+        button {
+            position: absolute;
+            bottom: -25px;
+            @include set-background($secondaryColor);
+            @include set-color($white);
+            width: 150px;
+            height: 50px;
+            border-radius: 23px;
+            border: none;
+            z-index: 3;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    .pricingCard:nth-child(2) {
+        @include set-border(1px, $primaryColor);
+        transform: scale(1.1);
+        box-shadow: 5px 10px 27px 0px #07ACE64A;
+
+        .price {
+            left: 20px;
+
+            p {
+                @include set-color($primaryColor);
+            }
+        }
+
+        button {
+            @include set-background($primaryColor);
+            box-shadow: 5px 10px 27px 0px #07ACE64A;
+        }
+    }
+
+    .pricingCard:nth-child(3) {
+        @include set-border(1px, $thirdColor);
+
+        .price {
+            left: 30px;
+
+            p {
+                @include set-color($thirdColor);
+            }
+        }
+
+        button {
+            @include set-background($thirdColor);
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    .pricing {
+        .pricingCards {
+            margin: 20px 5vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .pricingCard {
+                width: 24vw;
+                height: 65vh;
+
+                .price {
+                    top: 20px;
+                    left: 50%;
+                    transform: translate(-50%);
+                    text-align: center;
+                }
+            }
+
+            .pricingInfo {
+                top: 160px;
+                left: 50%;
+                transform: translate(-50%);
+                
+                ul {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+}

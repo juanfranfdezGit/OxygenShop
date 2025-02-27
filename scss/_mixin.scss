@@ -1,3 +1,11 @@
 @mixin set-background($color) {
     background: $color;
 }
+
+@mixin set-border($size, $color) {
+    border: $size solid $color;
+}
+
+@mixin set-color($color) {
+    color: $color;
+}
