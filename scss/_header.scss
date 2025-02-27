@@ -5,77 +5,79 @@ header {
     box-shadow: 0px 3px 6px 0px #0000004A;
     width: 100vw;
     height: 70px;
-    position: relative;
-}
+    position: fixed;
+    top: 0;
+    background: $white;
 
-header h1 {
-    color: $primaryColor;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 37px;
-}
+    h1 {
+        color: $primaryColor;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 37px;
+    }
 
-header .hamburguer {
-    position: absolute;
-    right: 30px;
-    top: 30px;
-}
+    .hamburguer {
+        position: absolute;
+        right: 30px;
+        top: 30px;
 
-header .hamburguer span {
-    display: block;
-    width: 20px;
-    height: 2px;
-    border-radius: 8px;
-    background: $primaryColor;
-    margin-bottom: 3px;
-}
+        span {
+            display: block;
+            width: 20px;
+            height: 2px;
+            border-radius: 8px;
+            background: $primaryColor;
+            margin-bottom: 3px;
+        }
+    }
 
-header nav {
-    display: none;
+    nav{
+        display: none;
+    }
 }
 
 @media (min-width: 400px) {
-    header h1 {
-        margin-left: 100px;
-    }
+    header {
+        h1 {
+            margin-left: 100px;
+        }
+        
+        .hamburguer {
+            span {
+                display: none;
+            }
+        }
 
-    header .hamburguer span {
-        display: none;
-    }
+        nav {
+            display: block;
+            position: absolute;
+            right: 110px;
+            top: 30px; 
 
-    header nav {
-        display: block;
-        position: absolute;
-        right: 110px;
-        top: 30px;
-    }
+            ul {
+                display: inline-flex;
+                gap: 40px;
 
-    header nav ul {
-        display: inline-flex;
-        gap: 40px;
-    }
+                li.active {
+                    display: block;
+                    border-bottom: 4px solid $primaryColor;
+                    height: 40px;
+                    width: 80px;
+                    text-align: center;
+                }
 
-    header nav ul li.active {
-        display: block;
-        border-bottom: 4px solid $primaryColor;
-        height: 40px;
-        width: 80px;
-        text-align: center;
-    }
-    
-    header nav ul a {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 700;
-        font-size: 11px;
-        line-height: 15px;
-        color: $grey;
-    }
+                a {
+                    font-family: "Open Sans", sans-serif;
+                    font-weight: 700;
+                    font-size: 11px;
+                    line-height: 15px;
+                    color: $grey;
+                }
 
-    header nav ul a.active {
-        font-family: "Open Sans", sans-serif;
-        font-weight: 700;
-        font-size: 11px;
-        line-height: 15px;
-        color: $black;
+                a.active {
+                    color: $black;
+                }
+            }
+        }
     }
 }

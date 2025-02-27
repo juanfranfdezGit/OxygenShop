@@ -1,0 +1,93 @@
+.popular {
+    h2 {
+        font-weight: 300;
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        width: 300px;
+        margin: 0 auto;
+    }
+    
+    .data {
+        width: 120px;
+        margin: 25px auto;
+        text-align: center;
+    
+        .ico {
+            position: relative;
+    
+            div {
+                position: absolute;
+                width: 62px;
+                height: 62px;
+                border-radius: 50%;
+                background: #FB3B64;
+                left: 20px;
+                top: 0;
+            }
+    
+            div.back02 {
+                background: #08A6E4;
+            }
+    
+            div.back03 {
+                background: #55DFB4;
+            }
+    
+            .img01 {
+                position: absolute;
+                z-index: 20;
+                width: 44px;
+                right: 20px;
+            }
+    
+            .img02, .img03 {
+                position: absolute;
+                z-index: 20;
+                width: 60px;
+                right: 20px;
+                top: 10px;
+            }
+    
+            .img03 {
+                width: 44px;
+            }
+        }
+    
+        h3 {
+            padding-top: 80px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 800;
+            letter-spacing: 6px;
+        }
+    
+        p {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 20px;
+            color: $grey;
+            padding-top: 19px;
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    .popular {
+        h2 {
+            width: 716px;
+        }
+
+        .datas {
+            display: flex;
+            margin: 100px 410px;
+            gap: 180px;
+
+            .data {
+                .img03 {
+                    right: 10px;
+                }
+            }
+        }
+    }
+}

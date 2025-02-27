@@ -3,22 +3,21 @@ header {
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   width: 100vw;
   height: 70px;
-  position: relative;
+  position: fixed;
+  top: 0;
+  background: #fff;
 }
-
 header h1 {
   color: #08A6E4;
   font-weight: 300;
   font-size: 32px;
   line-height: 37px;
 }
-
 header .hamburguer {
   position: absolute;
   right: 30px;
   top: 30px;
 }
-
 header .hamburguer span {
   display: block;
   width: 20px;
@@ -27,7 +26,6 @@ header .hamburguer span {
   background: #08A6E4;
   margin-bottom: 3px;
 }
-
 header nav {
   display: none;
 }
@@ -64,11 +62,125 @@ header nav {
     color: #A5A5A5;
   }
   header nav ul a.active {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    line-height: 15px;
     color: #111;
+  }
+}
+.hero {
+  text-align: center;
+  margin-top: 170px;
+}
+.hero h2 {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+}
+.hero p {
+  width: 308px;
+  text-align: center;
+  margin: 20px auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+.hero button {
+  width: 310px;
+  height: 67px;
+  background: #08A6E4;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  border-radius: 48px;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+}
+.hero img {
+  margin-top: 50px;
+  width: 779px;
+  margin-left: -180px;
+}
+
+@media (min-width: 400px) {
+  .hero h2 {
+    font-size: 49px;
+    line-height: 57px;
+  }
+  .hero img {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+.popular h2 {
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+.popular .data {
+  width: 120px;
+  margin: 25px auto;
+  text-align: center;
+}
+.popular .data .ico {
+  position: relative;
+}
+.popular .data .ico div {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #FB3B64;
+  left: 20px;
+  top: 0;
+}
+.popular .data .ico div.back02 {
+  background: #08A6E4;
+}
+.popular .data .ico div.back03 {
+  background: #55DFB4;
+}
+.popular .data .ico .img01 {
+  position: absolute;
+  z-index: 20;
+  width: 44px;
+  right: 20px;
+}
+.popular .data .ico .img02, .popular .data .ico .img03 {
+  position: absolute;
+  z-index: 20;
+  width: 60px;
+  right: 20px;
+  top: 10px;
+}
+.popular .data .ico .img03 {
+  width: 44px;
+}
+.popular .data h3 {
+  padding-top: 80px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+.popular .data p {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #A5A5A5;
+  padding-top: 19px;
+}
+
+@media (min-width: 400px) {
+  .popular h2 {
+    width: 716px;
+  }
+  .popular .datas {
+    display: flex;
+    margin: 100px 410px;
+    gap: 180px;
+  }
+  .popular .datas .data .img03 {
+    right: 10px;
   }
 }
 * {

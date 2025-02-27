@@ -1,0 +1,51 @@
+.hero {
+    text-align: center;
+    margin-top: 170px;
+
+    h2 {
+        font-weight: 400;
+        font-size: 35px;
+        line-height: 41px;
+    }
+
+    p {
+        width: 308px;
+        text-align: center;
+        margin: 20px auto;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    button {
+        width: 310px;
+        height: 67px;
+        background: $primaryColor;
+        box-shadow: 5px 10px 14px 0px #07ACE64A;
+        border-radius: 48px;
+        border: none;
+        color: $white;
+        margin-top: 20px;
+    }
+
+    img {
+        margin-top: 50px;
+        width: 779px;
+        margin-left: -180px;
+    }
+}
+
+@media (min-width: 400px) {
+    .hero {
+        h2 {
+            font-size: 49px;
+            line-height: 57px;  
+        }
+
+        img {
+            width: 100%;
+            margin-left: 0px;
+        }
+          
+    }
+}
