@@ -1,0 +1,179 @@
+.form {
+    margin: 0 30px;
+
+    .form__info {
+        .form__info-title {
+            font-size: 40px;
+            line-height: 47px;
+        }
+
+        .form__info-description {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .form__info__contact {
+            margin: 40px 0;
+
+            .form__info__contact__item {
+                margin-bottom: 8px;
+
+                .form__info__contact__item-image,
+                .form__info__contact__item-description {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+
+                .form__info__contact__item-image {
+                    width: 27px;
+                    height: 27px;
+                }
+
+                .form__info__contact__item-description {
+                    font-family: $font-openSans;
+                    font-size: 16px;
+                    line-height: 22px;
+                    @include set-color($grey);
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+
+    .form__form {
+        margin-top: 60px;
+
+        .form__form__input {
+            position: relative;
+
+            .form__form__input-label {
+                font-family: $font-openSans;
+                position: absolute;
+                color: $primaryColor;
+                font-size: 11px;
+                font-weight: 600;
+                line-height: 15px;
+                letter-spacing: 3px;
+                top: -15px;
+            }
+
+            .form__form__input-input {
+                border: none;
+                border-bottom: 1px solid $grey;
+                width: 80vw;
+                padding: 12px;
+                outline: none;
+                margin-bottom: 50px;
+            }
+        }
+
+        .form__form__policy {
+            position: relative;
+
+            .form__form__policy-checkbox, .form__form__policy-description {
+                display: inline;
+            }
+
+            .form__form__policy-checkbox {
+                position: absolute;
+                display: block;
+                width: 24px;
+                height: 24px;
+                appearance: none;
+                background: $white;
+                cursor: pointer;
+                border: 1px solid $grey;
+                border-radius: 4px;
+
+                &:checked {
+                    background: $white;
+                }
+
+                &:checked::after {
+                    content: '';
+                    display: block;
+                    width: 22px;
+                    height: 22px;
+                    background-image: url(../assets/Checkmark.png);
+                    background-size: cover;
+                    background-position: center; 
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            .form__form__policy-description {
+                display: block;
+                margin-left: 30px;
+                font-family: $font-openSans;
+                font-size: 12px;
+                line-height: 16px;
+                color: $grey;
+            }
+        }
+
+        .form__form__button {
+            width: 226px;
+            height: 57px;
+            border: none;
+            background: $primaryColor;
+            box-shadow: 5px 10px 14px 0px #07ACE64A;
+            color: $white;
+            border-radius: 35px;
+            margin-top: 30px;
+            position: relative;
+            left: 26vw;
+            font-weight: 700;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 400px) {
+    
+}
+
+@media (min-width: 840px) {
+    .form {
+        margin: 120px auto;
+        display: flex;
+        width: 60vw;
+
+        .form__info {
+            width: 50%;
+
+            .form__info-title {
+                font-size: 49px;
+                line-height: 47px;
+                margin-bottom: 8px;
+            }
+        }
+
+        .form__info__contact {
+            display: flex;
+            gap: 30px;
+        }
+
+        .form__form {
+            width: 70%;
+            margin-top: 20px;
+
+            .form__form__input {
+                position: relative;
+    
+                .form__form__input-input {
+                    width: 100%;
+                }
+            }
+
+            .form__form__button {
+                left: 23vw;
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -106,64 +106,111 @@
         </section>
 
         <section class="pricing">
-            <h2>Pricing</h2>
+            <h2 class="pricing__title">Pricing</h2>
 
-            <div class="pricingCards">
-                <div class="pricingCard">
-                    <div class="price">
-                        <h3>Basic</h3>
-                        <p>$0</p>
+            <div class="pricing__cards">
+                <div class="pricing__cards__item">
+                    <div class="pricing__cards__item__price">
+                        <h3 class="pricing__cards__item__price-plan">Basic</h3>
+                        <p class="pricing__cards__item__price-number">$0</p>
                     </div>
-                    <div class="pricingInfo">
-                        <ul>
-                            <li class="include">100 MB HDD</li>
-                            <li class="include">1 Subdomain</li>
-                            <li class="include">2 E-mails</li>
-                            <li class="nonInclude">Two years license</li>
-                            <li class="nonInclude">Full support</li>
+                    <div class="pricing__cards__item__info">
+                        <ul class="pricing__cards__item__info__list">
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">100 MB HDD</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">1 Subdomain</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">2 E-mails</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--nonInclude">Two years license</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--nonInclude">Full support</li>
                         </ul>
                     </div>
-                    <button>Begin</button>
+                    <button class="pricing__cards__item__button">Begin</button>
                 </div>
 
-                <div class="pricingCard">
-                    <div class="price">
-                        <h3>Professional</h3>
-                        <p>$25</p>
-                        <span>Limited offer</span>
+                <div class="pricing__cards__item pricing__cards__item--primaryColor">
+                    <div class="pricing__cards__item__price">
+                        <h3 class="pricing__cards__item__price-plan">Professional</h3>
+                        <p class="pricing__cards__item__price-number">$25</p>
+                        <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
-                    <div class="pricingInfo">
-                        <ul>
-                            <li class="include">500 MB HDD</li>
-                            <li class="include">2 Subdomain</li>
-                            <li class="include">5 E-mails</li>
-                            <li class="include">One years license</li>
-                            <li class="nonInclude">Full support</li>
+                    <div class="pricing__cards__item__info">
+                        <ul class="pricing__cards__item__info__list">
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">500 MB HDD</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">2 Subdomain</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">5 E-mails</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">One years license</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--nonInclude">Full support</li>
                         </ul>
                     </div>
-                    <button>Begin</button>
+                    <button class="pricing__cards__item__button">Begin</button>
                 </div>
 
-                <div class="pricingCard">
-                    <div class="price">
-                        <h3>Premium</h3>
-                        <p>$60</p>
-                        <span>Limited offer</span>
+                <div class="pricing__cards__item pricing__cards__item--thirdColor">
+                    <div class="pricing__cards__item__price">
+                        <h3 class="pricing__cards__item__price-plan">Premium</h3>
+                        <p class="pricing__cards__item__price-number">$60</p>
+                        <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
-                    <div class="pricingInfo">
-                        <ul>
-                            <li class="include">2 GB HDD</li>
-                            <li class="include">5 Subdomain</li>
-                            <li class="include">20 E-mails</li>
-                            <li class="include">Two years license</li>
-                            <li class="include">Full support</li>
+                    <div class="pricing__cards__item__info">
+                        <ul class="pricing__cards__item__info__list">
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">2 GB HDD</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">5 Subdomain</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">20 E-mails</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">Two years license</li>
+                            <li class="pricing__cards__item__info__list-item pricing__cards__item__info__list-item--include">Full support</li>
                         </ul>
                     </div>
-                    <button>Begin</button>
+                    <button class="pricing__cards__item__button">Begin</button>
                 </div>
             </div>
         </section>
+
+        <section class="form">
+            <div class="form__info">
+                <h2 class="form__info-title">Any questions?</h2>
+                <p class="form__info-description">Leave your email address or call us!</p>
+                <div class="form__info__contact">
+                    <div class="form__info__contact__item">
+                        <img class="form__info__contact__item-image" src="./assets/mailIcon.png" alt="Mail icon">
+                        <p class="form__info__contact__item-description">info@bestshop.xyz</p>
+                    </div>
+                    <div class="form__info__contact__item">
+                        <img class="form__info__contact__item-image" src="./assets/phoneIcon.png" alt="Phone icon">
+                        <p class="form__info__contact__item-description">123 456 789</p>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="form__form" action="" method="post">
+                <div class="form__form__input">
+                    <label for="name" class="form__form__input-label">NAME</label>
+                    <input class="form__form__input-input" type="text" name="name" id="name">
+                </div>
+                <div class="form__form__input">
+                    <label for="email" class="form__form__input-label">E-MAIL</label>
+                    <input class="form__form__input-input" type="text" name="email" id="email">
+                </div>
+                <div class="form__form__policy">
+                    <input class="form__form__policy-checkbox" type="checkbox" name="policy" id="policy">
+                    <p class="form__form__policy-description">I hereby give consent for my personal data included in my application to be processed for the 
+                        purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection 
+                        of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and 
+                        repealing Directive 95/46/EC (Data Protection Directive)</p>
+                </div>
+                <input class="form__form__button" type="submit" value="Send">
+            </form>
+        </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer__logo">
+            <h2 class="footer_logo-logo">OXYGENShop</h2>
+            <p class="footer__logo-copyright">© 2025 OXYGEN, All Rights Reserved</p>
+        </div>
+        <div class="footer__socials">
+            <img src="./assets/Twitter.png" alt="Twitter logo" class="footer__socials-twitter">
+            <img src="./assets/Facebook.png" alt="Facebook logo" class="footer__socials-facebook">
+        </div>
+    </footer>
     
 </body>
 </html>

@@ -1,19 +1,17 @@
 .hero {
     text-align: center;
-    margin-top: 170px;
+    margin-top: 25vh;
 
     .hero__title {
-        font-weight: 400;
         font-size: 35px;
         line-height: 41px;
     }
 
     .hero__description {
-        width: 308px;
+        width: 60vw;
         text-align: center;
         margin: 20px auto;
-        font-family: "Open Sans", sans-serif;
-        font-weight: 400;
+        font-family: $font-openSans;
         font-size: 16px;
     }
 
@@ -25,7 +23,8 @@
         border-radius: 48px;
         border: none;
         color: $white;
-        margin-top: 20px;  
+        margin-top: 20px; 
+        font-weight: 700; 
 
         &:hover {
             cursor: pointer;
@@ -34,13 +33,17 @@
 
     
     .hero__image {
-        margin-top: 50px;
-        width: 779px;
-        margin-left: -180px;
+        margin-top: 10vh;
+        width: 200%;
+        margin-left: -45vw;
     }
 }
 
 @media (min-width: 400px) {
+
+}
+
+@media (min-width: 840px) {
     .hero {
         .hero__title {
             font-size: 49px;

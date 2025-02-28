@@ -3,7 +3,9 @@
 @import '_hero.scss';
 @import '_popular.scss';
 @import '_cards.scss';
-@import 'pricing.scss';
+@import '_pricing.scss';
+@import '_form.scss';
+@import '_footer.scss';
 
 * {
     margin: 0;
@@ -12,8 +14,9 @@
 }
 
 body {
-    font-family: "Raleway", serif;
+    font-family: $font-raleway;
     min-width: 320px;
+    font-weight: 400;
 }
 
 li {

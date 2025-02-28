@@ -1,14 +1,14 @@
 @import '_mixin';
 
 .popular {
-    margin-bottom: 100px;
+    margin-bottom: 14vh;
 
     .popular__title {
         font-weight: 300;
         font-size: 30px;
         line-height: 35px;
         text-align: center;
-        width: 300px;
+        width: 80vw;
         margin: 0 auto;
     }
     
@@ -69,7 +69,6 @@
             }
         
             .popular__datas-description {
-                font-weight: 400;
                 font-size: 17px;
                 line-height: 20px;
                 color: $grey;
@@ -80,16 +79,17 @@
     }
 }
 
-@media (min-width: 400px) {
-    .popular {
-        .popular__title {
-            width: 716px;
-        }
 
+@media (min-width: 400px) {
+    
+}
+
+@media (min-width: 840px) {
+    .popular {
         .popular__datas {
             display: flex;
-            margin: 100px 25vw;
-            gap: 180px;
+            margin: 10vh 25vw;
+            gap: 4vw;
 
             .popular__datas-icon {
                 .popular__datas-icon-image03 {

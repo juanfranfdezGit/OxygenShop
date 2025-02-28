@@ -1,78 +1,77 @@
 @import '_mixin';
-@import '_variables';
 
 .pricing {
     padding-top: 120px;
 
-    h2 {
+    .pricing__title {
         font-size: 36px;
-        font-weight: 400;
         line-height: 42px;
         text-align: center;
         margin-bottom: -60px;
     }
 
-    .pricingCard {
+    .pricing__cards__item {
         width: 293px;
         height: 275px;
         @include set-border(1px, $secondaryColor);
         border-radius: 18px;
         margin: 80px auto;
         position: relative;
+        transition: all 1s;
+        cursor: pointer;
 
-        .price {
+        .pricing__cards__item__price {
             position: absolute;
             top: 80px;
             left: 50px;
             text-align: center;
 
-            h3 {
+            .pricing__cards__item__price-plan {
                 font-size: 20px;
                 font-weight: 700;
                 line-height: 24px;
-                color: #13253B;
+                color: $primaryColorDark;
             }
 
-            p {
-                font-family: "Open Sans", sans-serif; 
+            .pricing__cards__item__price-number {
+                font-family: $font-openSans; 
                 font-size: 46px;
                 line-height: 64px;
                 font-weight: 300;
                 @include set-color($secondaryColor);
             }
 
-            span {
+            .pricing__cards__item__price-extra {
                 font-size: 12px;
                 font-weight: 700;
                 line-height: 14px;
             }
         }
 
-        .pricingInfo {
+        .pricing__cards__item__info {
             position: absolute;
             top: 30px;
             right: 10px;
             
-            ul {
-                li {
-                    font-family: "Open Sans", sans-serif; 
+            .pricing__cards__item__info__list {
+                .pricing__cards__item__info__list-item {
+                    font-family: $font-openSans; 
                     font-size: 14px;
-                    font-weight: 400;
                     line-height: 19px;
                     margin-bottom: 20px;
                 }
 
-                li.include {
+                .pricing__cards__item__info__list-item.pricing__cards__item__info__list-item--include {
                     list-style-image: url(../assets/Checkbox.png);
                 }
 
-                li.nonInclude {
+                .pricing__cards__item__info__list-item.pricing__cards__item__info__list-item--nonInclude {
                     list-style-image: url(../assets/Cross.png);
                 }
             }
         }
 
-        button {
+        .pricing__cards__item__button {
             position: absolute;
             bottom: -25px;
             @include set-background($secondaryColor);
@@ -84,58 +83,79 @@
             z-index: 3;
             left: 50%;
             transform: translate(-50%);
+            font-weight: 700;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 5px 10px 27px 0px $secondaryColor;
         }
     }
 
-    .pricingCard:nth-child(2) {
+    .pricing__cards__item--primaryColor {
         @include set-border(1px, $primaryColor);
-        transform: scale(1.1);
-        box-shadow: 5px 10px 27px 0px #07ACE64A;
 
-        .price {
+        .pricing__cards__item__price {
             left: 20px;
 
-            p {
+            .pricing__cards__item__price-number {
                 @include set-color($primaryColor);
             }
         }
 
-        button {
+        .pricing__cards__item__button {
             @include set-background($primaryColor);
             box-shadow: 5px 10px 27px 0px #07ACE64A;
         }
+
+        &:hover {
+            box-shadow: 5px 10px 27px 0px $primaryColor;
+        }
     }
 
-    .pricingCard:nth-child(3) {
+    .pricing__cards__item--thirdColor {
         @include set-border(1px, $thirdColor);
 
-        .price {
+        .pricing__cards__item__price {
             left: 30px;
 
-            p {
+            .pricing__cards__item__price-number {
                 @include set-color($thirdColor);
             }
         }
 
-        button {
+        .pricing__cards__item__button {
             @include set-background($thirdColor);
+        }
+
+        &:hover {
+            box-shadow: 5px 10px 27px 0px $thirdColor;
         }
     }
 }
 
+
 @media (min-width: 400px) {
+    
+}
+
+@media (min-width: 840px) {
     .pricing {
-        .pricingCards {
+        .pricing__cards {
             margin: 20px 5vw;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            .pricingCard {
+            .pricing__cards__item {
                 width: 24vw;
                 height: 65vh;
 
-                .price {
+                .pricing__cards__item__price {
                     top: 20px;
                     left: 50%;
                     transform: translate(-50%);
@@ -143,12 +163,12 @@
                 }
             }
 
-            .pricingInfo {
+            .pricing__cards__item__info {
                 top: 160px;
                 left: 50%;
                 transform: translate(-50%);
                 
-                ul {
+                .pricing__cards__item__info__list {
                     text-align: center;
                 }
             }
