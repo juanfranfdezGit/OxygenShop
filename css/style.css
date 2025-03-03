@@ -692,6 +692,7 @@ body {
   font-family: "Raleway", serif;
   min-width: 320px;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 li {
