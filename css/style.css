@@ -482,7 +482,6 @@ header .header__nav {
     transform: translate(-50%);
   }
   .pricing .pricing__cards .pricing__cards__item__info {
-    left: 80%;
     transform: translate(-50%);
   }
 }
