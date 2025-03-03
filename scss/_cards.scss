@@ -2,6 +2,8 @@
 @import '_mixin';
 
 .cards {
+    background: #f7f7f7;
+
     .cards__item {
         width: 317px;
         height: 370px;
@@ -69,6 +71,7 @@
                 font-size: 30px;
                 line-height: 35px;
                 margin-bottom: 20px;
+                font-weight: 400;
             }
 
             .cards__item__datas-description {

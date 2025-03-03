@@ -196,6 +196,9 @@ header .header__nav {
     right: 10px;
   }
 }
+.cards {
+  background: #f7f7f7;
+}
 .cards .cards__item {
   width: 317px;
   height: 370px;
@@ -255,6 +258,7 @@ header .header__nav {
   font-size: 30px;
   line-height: 35px;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 .cards .cards__item .cards__item__datas .cards__item__datas-description {
   font-size: 14px;
@@ -405,6 +409,7 @@ header .header__nav {
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 20px;
+  list-style-position: inside;
 }
 .pricing .pricing__cards__item .pricing__cards__item__info .pricing__cards__item__info__list .pricing__cards__item__info__list-item.pricing__cards__item__info__list-item--include {
   list-style-image: url(../assets/Checkbox.png);
@@ -430,7 +435,7 @@ header .header__nav {
   cursor: pointer;
 }
 .pricing .pricing__cards__item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 5px 10px 27px 0px #FB3B64;
 }
 .pricing .pricing__cards__item--primaryColor {
@@ -483,28 +488,30 @@ header .header__nav {
 }
 @media (min-width: 840px) {
   .pricing .pricing__cards {
-    margin: 20px 5vw;
+    margin: 20px 9vw;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .pricing .pricing__cards .pricing__cards__item {
     width: 24vw;
-    height: 65vh;
+    height: 55vh;
   }
   .pricing .pricing__cards .pricing__cards__item .pricing__cards__item__price {
-    top: 20px;
+    top: 40px;
     left: 50%;
     transform: translate(-50%);
     text-align: center;
   }
   .pricing .pricing__cards .pricing__cards__item__info {
-    top: 160px;
+    top: 220px;
     left: 50%;
     transform: translate(-50%);
   }
   .pricing .pricing__cards .pricing__cards__item__info .pricing__cards__item__info__list {
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 }
 .form {
