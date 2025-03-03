@@ -95,6 +95,10 @@ header .header__nav {
 .hero .hero__button:hover {
   cursor: pointer;
 }
+.hero .hero__image__container {
+  width: 100%;
+  overflow: hidden;
+}
 .hero .hero__image {
   margin-top: 10vh;
   width: 200%;
