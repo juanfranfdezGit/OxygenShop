@@ -95,28 +95,29 @@
 @media (min-width: 840px) {
     .cards {
         .cards__item {
-            width: 1124px;
+            width: 65vw;
             display: flex;
             align-items: center;
-            padding: 90px 35px;
+            padding: 4rem 2rem;
 
             .cards__item-back {
                 width: 180px;
                 height: 180px;
-                top: 40px;
-                right: 70px;
+                top: 60px;
+                right: 90px;
             }
     
             .cards__item-back02 {
+                top: 20px;
                 width: 320px;
                 height: 320px;            
             }
     
             .cards__item-back03 {
-                width: 33.7vw;
+                width: 25.7vw;
                 height: 100%;
                 bottom: 0;
-                left: 51vw;
+                left: 39.5vw;
             }
 
             .cards__item-image {
@@ -132,14 +133,13 @@
             }
     
             .cards__item-image03 {
-                width: 265px;
+                width: 17vw;
                 top: 100px;
-                left: 55vw;
+                left: 43vw;
             }
 
             .cards__item__datas {
-                width: 416px;
-                height: 168px;
+                width: 20vw;
 
                 .cards__item__datas-title {
                     font-size: 36px;
@@ -154,7 +154,7 @@
                 .cards__item__datas-span, .cards__item__datas-span02, .cards__item__datas-span03 {
                     display: block;
                     margin-top: 50px;
-                    width: 327px;
+                    width: 17vw;
                     height: 4px;
                     @include set-background($secondaryColor);
                 }
@@ -174,14 +174,14 @@
 
             .cards__item__datas {
                 .cards__item__datas-title {
-                    width: 250px;
+                    width: 15vw;
                 }
             }
         }
 
-        .cards__item:last-child {
-            width: 620px;
-            right: 16.5vw;
+        .cards__item:nth-child(3) {
+            width: 37vw;
+            right: 14vw;
         }
     }
 }
