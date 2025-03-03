@@ -1,9 +1,48 @@
 # OxygenShop
 
-OxygenShop is an academic project designed as an online store, built with clean and structured code. The goal is to apply best practices in web development, ensuring semantic correctness and maintainability. This project is currently focused on the foundation of the store, which will be expanded with additional functionalities in the future.
+OxygenShop es un proyecto académico diseñado como una tienda en línea, construido con un código limpio y estructurado. El objetivo es aplicar las mejores prácticas en desarrollo web, garantizando corrección semántica y mantenibilidad. Actualmente, el proyecto está enfocado en la base de la tienda, con planes de expansión para agregar funcionalidades adicionales en el futuro.
 
-The HTML structure follows the BEM (Block, Element, Modifier) methodology, ensuring a clear and scalable architecture. Each component is designed with readability and reusability in mind, making it easier to maintain and extend. Semantic HTML is used to enhance accessibility and SEO performance.
+## Tecnologías y Metodologías
 
-For styling, the project utilizes SASS, allowing for modular and maintainable stylesheets. The use of variables, mixins, and nested selectors ensures an efficient and organized approach to styling. The codebase follows a structured hierarchy, making it easy to update and scale as new features are added.
+### 📐 Estructura HTML
+- Sigue la metodología **BEM (Block, Element, Modifier)** para una arquitectura clara y escalable.
+- Diseñado con **legibilidad y reutilización** en mente.
+- Uso de **HTML semántico** para mejorar la accesibilidad y el SEO.
 
-In the future, JavaScript will be integrated to enhance interactivity and provide dynamic functionalities.
+### 🎨 Estilos con SASS
+- Utiliza **SASS** para una gestión modular y mantenible de los estilos.
+- Implementación de **variables, mixins y selectores anidados** para mayor eficiencia y organización.
+- Estructura jerárquica del código para facilitar actualizaciones y escalabilidad.
+
+### 🚀 Futuras Implementaciones
+- Integración de **JavaScript** para mejorar la interactividad.
+- Desarrollo de funcionalidades dinámicas y experiencias de usuario más atractivas.
+
+## 🔧 Instalación
+Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
+
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/tu-usuario/OxygenShop.git
+   ```
+2. Navega al directorio del proyecto:
+   ```sh
+   cd OxygenShop
+   ```
+3. Instala las dependencias de SASS (si no lo tienes instalado, primero instala Node.js y npm):
+   ```sh
+   npm install -g sass
+   ```
+4. Compila los archivos SASS a CSS:
+   ```sh
+   sass assets/css/styles.scss assets/css/styles.css
+   ```
+5. Abre `index.html` en tu navegador o usa una extensión de servidor local para ver los cambios en tiempo real.
+
+
+## 📜 Licencia
+Este proyecto es de código abierto y se encuentra bajo la licencia MIT.
+
+---
+
+💡 **Nota:** Este es un proyecto en desarrollo. ¡Cualquier contribución o sugerencia es bienvenida! 🚀
