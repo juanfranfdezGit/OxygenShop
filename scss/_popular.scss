@@ -80,7 +80,13 @@
 
 
 @media (min-width: 400px) {
-    
+    .popular {
+        .popular__datas {
+            display: flex;
+            margin: 10vh 8vw;
+            gap: 4vw;
+        }
+    }
 }
 
 @media (min-width: 840px) {

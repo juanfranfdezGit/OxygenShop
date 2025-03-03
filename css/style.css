@@ -175,6 +175,13 @@ header .header__nav {
   padding-top: 19px;
 }
 
+@media (min-width: 400px) {
+  .popular .popular__datas {
+    display: flex;
+    margin: 10vh 8vw;
+    gap: 4vw;
+  }
+}
 @media (min-width: 840px) {
   .popular .popular__datas {
     display: flex;
@@ -256,6 +263,17 @@ header .header__nav {
   padding-top: 30px;
 }
 
+@media (min-width: 400px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -5vh;
+    margin-bottom: 5vh;
+  }
+  .cards .cards__item:nth-child(3) {
+    width: 89vw;
+  }
+}
 @media (min-width: 840px) {
   .cards .cards__item {
     width: 65vw;
@@ -443,6 +461,22 @@ header .header__nav {
   box-shadow: 5px 10px 27px 0px #55DFB4;
 }
 
+@media (min-width: 400px) {
+  .pricing {
+    margin-bottom: 15vh;
+  }
+  .pricing .pricing__cards .pricing__cards__item {
+    width: 60vw;
+  }
+  .pricing .pricing__cards .pricing__cards__item .pricing__cards__item__price {
+    left: 25%;
+    transform: translate(-50%);
+  }
+  .pricing .pricing__cards .pricing__cards__item__info {
+    left: 80%;
+    transform: translate(-50%);
+  }
+}
 @media (min-width: 840px) {
   .pricing .pricing__cards {
     margin: 20px 5vw;
@@ -584,6 +618,12 @@ header .header__nav {
   cursor: pointer;
 }
 
+@media (min-width: 400px) {
+  .form {
+    width: 80vw;
+    margin: 10vh auto;
+  }
+}
 @media (min-width: 840px) {
   .form {
     margin: 120px auto;

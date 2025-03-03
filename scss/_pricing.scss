@@ -140,7 +140,25 @@
 
 
 @media (min-width: 400px) {
-    
+    .pricing {
+        margin-bottom: 15vh;
+
+        .pricing__cards {
+            .pricing__cards__item {
+                width: 60vw;
+
+                .pricing__cards__item__price {
+                    left: 25%;
+                    transform: translate(-50%);
+                }
+            }
+
+            .pricing__cards__item__info {
+                left: 80%;
+                transform: translate(-50%);
+            }
+        }
+    }
 }
 
 @media (min-width: 840px) {

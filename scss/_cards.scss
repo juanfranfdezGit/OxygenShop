@@ -89,7 +89,16 @@
 
 
 @media (min-width: 400px) {
-    
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -5vh;
+        margin-bottom: 5vh;
+
+        .cards__item:nth-child(3) {
+            width: 89vw;
+        }
+    }
 }
 
 @media (min-width: 840px) {

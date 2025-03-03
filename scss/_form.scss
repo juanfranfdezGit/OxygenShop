@@ -135,7 +135,10 @@
 }
 
 @media (min-width: 400px) {
-    
+    .form {
+        width: 80vw;
+        margin: 10vh auto;
+    }   
 }
 
 @media (min-width: 840px) {
