@@ -198,7 +198,7 @@ header .header__nav {
 }
 .cards {
   background: #f7f7f7;
-  padding: 10vh;
+  padding-top: 5vh;
   padding-bottom: 15vh;
 }
 .cards .cards__item {
