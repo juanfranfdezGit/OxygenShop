@@ -110,7 +110,6 @@
 
         .pricing__cards__item__button {
             @include set-background($primaryColor);
-            box-shadow: 5px 10px 27px 0px #07ACE64A;
         }
 
         &:hover {
