@@ -84,12 +84,14 @@
     display: inline-flex;
     gap: 90px;
   }
-  .header .header__nav .header__menu .header__menu-item.header__menu-item--active {
+  .header .header__nav .header__menu .header__menu-item {
     display: block;
-    border-bottom: 4px solid #08A6E4;
     height: 40px;
     width: 80px;
     text-align: center;
+  }
+  .header .header__nav .header__menu .header__menu-item.header__menu-item--active {
+    border-bottom: 4px solid #08A6E4;
   }
   .header .header__nav .header__menu a {
     font-family: "Open Sans", sans-serif;
@@ -764,6 +766,57 @@ li {
 a {
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.toTopButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 4vh;
+  right: -6vw;
+  width: 4rem;
+  height: 4rem;
+  background: #fff;
+  border: none;
+  border: 1px solid #A5A5A5;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 1px #111;
+  opacity: 0.6;
+  transition: all 0.5s;
+  z-index: 20;
+}
+.toTopButton img {
+  position: relative;
+  bottom: 1px;
+  width: 50%;
+  height: 50%;
+}
+.toTopButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 1px #111;
+  opacity: 1;
+}
+
+.toTopButton.active {
+  right: 2vw;
+}
+
+@media (max-width: 440px) {
+  .toTopButton {
+    display: none;
+  }
+}
+.scroller {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.6vh;
+  background: #08A6E4;
+  z-index: 14;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

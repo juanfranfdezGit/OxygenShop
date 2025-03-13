@@ -104,12 +104,15 @@
                 display: inline-flex;
                 gap: 90px;
 
-                .header__menu-item.header__menu-item--active {
+                .header__menu-item {
                     display: block;
-                    border-bottom: 4px solid $primaryColor;
                     height: 40px;
                     width: 80px;
                     text-align: center;
+                }
+
+                .header__menu-item.header__menu-item--active {
+                    border-bottom: 4px solid $primaryColor;
                 }
 
                 a {
