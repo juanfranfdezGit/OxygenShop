@@ -65,6 +65,14 @@
                 outline: none;
                 margin-bottom: 50px;
             }
+
+            .form__form__input-error {
+                display: none;
+                position: absolute;
+                top: 45px;
+                font-size: .9rem;
+                color: red;
+            }
         }
 
         .form__form__policy {

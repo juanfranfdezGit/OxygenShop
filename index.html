@@ -198,10 +198,12 @@
                 <div class="form__form__input">
                     <label for="name" class="form__form__input-label">NAME</label>
                     <input class="form__form__input-input" type="text" name="name" id="name">
+                    <p class="form__form__input-error" id="nameError">Introduce un nombre de entre 2 y 100 letras</p>
                 </div>
                 <div class="form__form__input">
                     <label for="email" class="form__form__input-label">E-MAIL</label>
                     <input class="form__form__input-input" type="text" name="email" id="email">
+                    <p class="form__form__input-error" id="emailError">Introduce un email válido</p>
                 </div>
                 <div class="form__form__policy">
                     <input class="form__form__policy-checkbox" type="checkbox" name="policy" id="policy">
@@ -210,7 +212,7 @@
                         of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and 
                         repealing Directive 95/46/EC (Data Protection Directive)</p>
                 </div>
-                <input class="form__form__button" type="submit" value="Send">
+                <input class="form__form__button" id="submit" type="submit" value="Send">
             </form>
         </section>
     </main>
@@ -228,4 +230,4 @@
     
 </body>
 </html>
-<script src="./js/main.js"></script>
+<script src="./js/main.js" type="module"></script>

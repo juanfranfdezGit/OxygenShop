@@ -400,9 +400,6 @@
     right: 14vw;
   }
 }
-.pricing {
-  padding-top: 120px;
-}
 .pricing .pricing__title {
   font-size: 36px;
   line-height: 42px;
@@ -612,6 +609,13 @@
   padding: 12px;
   outline: none;
   margin-bottom: 50px;
+}
+.form .form__form .form__form__input .form__form__input-error {
+  display: none;
+  position: absolute;
+  top: 45px;
+  font-size: 0.9rem;
+  color: red;
 }
 .form .form__form .form__form__policy {
   position: relative;
