@@ -1,4 +1,4 @@
-header {
+.header {
   padding: 1rem;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   width: 100vw;
@@ -6,20 +6,20 @@ header {
   position: fixed;
   top: 0;
   background: #fff;
-  z-index: 5;
+  z-index: 12;
 }
-header .header__title {
+.header .header__title {
   color: #08A6E4;
   font-weight: 300;
   font-size: 32px;
   line-height: 37px;
 }
-header .header__hamburguer {
+.header .header__hamburguer {
   position: absolute;
   right: 2rem;
   top: 2rem;
 }
-header .header__hamburguer span {
+.header .header__hamburguer span {
   display: block;
   width: 20px;
   height: 2px;
@@ -27,42 +27,84 @@ header .header__hamburguer span {
   background: #08A6E4;
   margin-bottom: 3px;
 }
-header .header__nav {
+.header .header__nav {
   display: none;
 }
 
+.header.disallow {
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2901960784);
+}
+
+.header__nav--mobile.disallow {
+  top: -120px;
+}
+
+.header__nav--mobile {
+  background: #fff;
+  position: fixed;
+  z-index: 11;
+  top: 65px;
+  background: reds;
+  transition: all 2s;
+  width: 100vw;
+  padding: 1rem 2rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2901960784);
+}
+.header__nav--mobile .header__menu--mobile .header__menu-item--mobile {
+  margin-bottom: 1rem;
+}
+.header__nav--mobile .header__menu--mobile .header__menu-item--mobile.header__menu-item--mobile--active {
+  display: block;
+}
+.header__nav--mobile .header__menu--mobile a {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  color: #A5A5A5;
+}
+.header__nav--mobile .header__menu--mobile .header__menu-item--mobile.header__menu-item--mobile--active a {
+  color: #111;
+}
+
 @media (min-width: 840px) {
-  header .header__title {
+  .header .header__title {
     margin-left: 8vw;
   }
-  header .header__hamburguer span {
+  .header .header__hamburguer span {
     display: none;
   }
-  header .header__nav {
+  .header .header__nav {
     display: block;
     position: absolute;
     right: 8vw;
     top: 1.9rem;
   }
-  header .header__nav .header__menu {
+  .header .header__nav .header__menu {
     display: inline-flex;
     gap: 90px;
   }
-  header .header__nav .header__menu .header__menu-item.header__menu-item--active {
+  .header .header__nav .header__menu .header__menu-item {
     display: block;
-    border-bottom: 4px solid #08A6E4;
     height: 40px;
     width: 80px;
     text-align: center;
   }
-  header .header__nav .header__menu a {
+  .header .header__nav .header__menu .header__menu-item.header__menu-item--active {
+    border-bottom: 4px solid #08A6E4;
+  }
+  .header .header__nav .header__menu a {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-size: 11px;
     line-height: 15px;
     color: #A5A5A5;
+    transition: all 0.5s;
   }
-  header .header__nav .header__menu .header__menu-item.header__menu-item--active a {
+  .header .header__nav .header__menu a:hover {
+    color: #111;
+  }
+  .header .header__nav .header__menu .header__menu-item.header__menu-item--active a {
     color: #111;
   }
 }
@@ -451,7 +493,6 @@ header .header__nav {
 }
 .pricing .pricing__cards__item--primaryColor .pricing__cards__item__button {
   background: #08A6E4;
-  box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
 }
 .pricing .pricing__cards__item--primaryColor:hover {
   box-shadow: 5px 10px 27px 0px #08A6E4;
@@ -707,6 +748,10 @@ header .header__nav {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Raleway", serif;
   min-width: 320px;
@@ -721,6 +766,57 @@ li {
 a {
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.toTopButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 4vh;
+  right: -6vw;
+  width: 4rem;
+  height: 4rem;
+  background: #fff;
+  border: none;
+  border: 1px solid #A5A5A5;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 1px #111;
+  opacity: 0.6;
+  transition: all 0.5s;
+  z-index: 20;
+}
+.toTopButton img {
+  position: relative;
+  bottom: 1px;
+  width: 50%;
+  height: 50%;
+}
+.toTopButton:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 1px #111;
+  opacity: 1;
+}
+
+.toTopButton.active {
+  right: 2vw;
+}
+
+@media (max-width: 440px) {
+  .toTopButton {
+    display: none;
+  }
+}
+.scroller {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0.6vh;
+  background: #08A6E4;
+  z-index: 14;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

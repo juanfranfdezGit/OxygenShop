@@ -1,4 +1,4 @@
-header {
+.header {
     padding: 1rem;
     box-shadow: 0px 3px 6px 0px #0000004A;
     width: 100vw;
@@ -6,7 +6,7 @@ header {
     position: fixed;
     top: 0;
     background: $white;
-    z-index: 5;
+    z-index: 12;
 
     .header__title {
         color: $primaryColor;
@@ -35,12 +35,55 @@ header {
     }
 }
 
+.header.disallow {
+    box-shadow: 0px 0px 0px 0px #0000004A;
+}
+
+.header__nav--mobile.disallow { 
+    top: -120px;
+}
+
+.header__nav--mobile {
+    background: $white;
+    position: fixed;
+    z-index: 11;
+    top: 65px;
+    background: reds;
+    transition: all 2s;
+    width: 100vw;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 4px 0px #0000004A;
+
+    .header__menu--mobile {
+
+        .header__menu-item--mobile {
+            margin-bottom: 1rem;
+        }
+
+        .header__menu-item--mobile.header__menu-item--mobile--active {
+            display: block;
+        }
+
+        a {
+            font-family: $font-openSans;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 15px;
+            color: $grey;
+        }
+
+        .header__menu-item--mobile.header__menu-item--mobile--active a {
+            color: $black;
+        }
+    }
+}
+
 @media (min-width: 400px) {
 
 }
 
 @media (min-width: 840px) {
-    header {
+    .header {
         .header__title {
             margin-left: 8vw;
         }
@@ -61,12 +104,15 @@ header {
                 display: inline-flex;
                 gap: 90px;
 
-                .header__menu-item.header__menu-item--active {
+                .header__menu-item {
                     display: block;
-                    border-bottom: 4px solid $primaryColor;
                     height: 40px;
                     width: 80px;
                     text-align: center;
+                }
+
+                .header__menu-item.header__menu-item--active {
+                    border-bottom: 4px solid $primaryColor;
                 }
 
                 a {
@@ -75,6 +121,11 @@ header {
                     font-size: 11px;
                     line-height: 15px;
                     color: $grey;
+                    transition: all .5s;
+                    
+                    &:hover {
+                        color: $black;
+                    }
                 }
 
                 .header__menu-item.header__menu-item--active a {
