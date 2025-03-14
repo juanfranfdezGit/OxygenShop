@@ -121,12 +121,23 @@
 
         <section id="prices" class="pricing">
             <h2 class="pricing__title">Pricing</h2>
+            <div class="pricing__exchange">
+                <div id="euroSymbol" class="pricing__exchange-symbolContainer">
+                    <p class="pricing__exchange-symbol">€</p>
+                </div>
+                <div id="usdSymbol" class="pricing__exchange-symbolContainer">
+                    <p class="pricing__exchange-symbol">$</p>
+                </div>
+                <div id="gbpSymbol" class="pricing__exchange-symbolContainer">
+                    <p class="pricing__exchange-symbol">£</p>
+                </div>
+            </div>
 
             <div class="pricing__cards">
                 <div class="pricing__cards__item">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Basic</h3>
-                        <p class="pricing__cards__item__price-number">$0</p>
+                        <p id="basicPrice" class="pricing__cards__item__price-number">$0</p>
                     </div>
                     <div class="pricing__cards__item__info">
                         <ul class="pricing__cards__item__info__list">
@@ -143,7 +154,7 @@
                 <div class="pricing__cards__item pricing__cards__item--primaryColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Professional</h3>
-                        <p class="pricing__cards__item__price-number">$25</p>
+                        <p id="profPrice" class="pricing__cards__item__price-number">$25</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">
@@ -161,7 +172,7 @@
                 <div class="pricing__cards__item pricing__cards__item--thirdColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Premium</h3>
-                        <p class="pricing__cards__item__price-number">$60</p>
+                        <p id="premiumPrice" class="pricing__cards__item__price-number">$60</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">

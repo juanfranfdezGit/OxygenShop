@@ -404,7 +404,34 @@
   font-size: 36px;
   line-height: 42px;
   text-align: center;
-  margin-bottom: -60px;
+  margin-top: 20px;
+}
+.pricing .pricing__exchange {
+  width: 50vw;
+  margin: 0 auto;
+  margin-bottom: -20px;
+  margin-top: 20px;
+}
+.pricing .pricing__exchange .pricing__exchange-symbolContainer {
+  display: inline-block;
+  position: relative;
+  background: #fff;
+  border: 1px solid #A5A5A5;
+  box-shadow: 0 0 5px #111;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 12px;
+}
+.pricing .pricing__exchange .pricing__exchange-symbolContainer .pricing__exchange-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
 }
 .pricing .pricing__cards__item {
   width: 293px;
@@ -514,6 +541,17 @@
   .pricing {
     margin-bottom: 15vh;
   }
+  .pricing .pricing__exchange {
+    width: 24vw;
+    margin-bottom: -40px;
+  }
+  .pricing .pricing__exchange .pricing__exchange-symbolContainer {
+    transition: all 0.5s;
+  }
+  .pricing .pricing__exchange .pricing__exchange-symbolContainer:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
   .pricing .pricing__cards .pricing__cards__item {
     width: 60vw;
   }
@@ -526,6 +564,17 @@
   }
 }
 @media (min-width: 840px) {
+  .pricing .pricing__exchange {
+    width: 10vw;
+    margin-bottom: -40px;
+  }
+  .pricing .pricing__exchange .pricing__exchange-symbolContainer {
+    transition: all 0.5s;
+  }
+  .pricing .pricing__exchange .pricing__exchange-symbolContainer:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
   .pricing .pricing__cards {
     margin: 20px 9vw;
     display: flex;
