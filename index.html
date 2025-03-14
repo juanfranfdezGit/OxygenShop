@@ -121,12 +121,23 @@
 
         <section id="prices" class="pricing">
             <h2 class="pricing__title">Pricing</h2>
+            <div class="pricing__exchange">
+                <div id="euroSymbol" class="pricing__exchange-symbolContainer">
+                    <p class="pricing__exchange-symbol">€</p>
+                </div>
+                <div id="usdSymbol" class="pricing__exchange-symbolContainer">
+                    <p class="pricing__exchange-symbol">$</p>
+                </div>
+                <div id="gbpSymbol" class="pricing__exchange-symbolContainer">
+                    <p class="pricing__exchange-symbol">£</p>
+                </div>
+            </div>
 
             <div class="pricing__cards">
                 <div class="pricing__cards__item">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Basic</h3>
-                        <p class="pricing__cards__item__price-number">$0</p>
+                        <p id="basicPrice" class="pricing__cards__item__price-number">$0</p>
                     </div>
                     <div class="pricing__cards__item__info">
                         <ul class="pricing__cards__item__info__list">
@@ -143,7 +154,7 @@
                 <div class="pricing__cards__item pricing__cards__item--primaryColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Professional</h3>
-                        <p class="pricing__cards__item__price-number">$25</p>
+                        <p id="profPrice" class="pricing__cards__item__price-number">$25</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">
@@ -161,7 +172,7 @@
                 <div class="pricing__cards__item pricing__cards__item--thirdColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Premium</h3>
-                        <p class="pricing__cards__item__price-number">$60</p>
+                        <p id="premiumPrice" class="pricing__cards__item__price-number">$60</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">
@@ -198,10 +209,12 @@
                 <div class="form__form__input">
                     <label for="name" class="form__form__input-label">NAME</label>
                     <input class="form__form__input-input" type="text" name="name" id="name">
+                    <p class="form__form__input-error" id="nameError">Introduce un nombre de entre 2 y 100 letras</p>
                 </div>
                 <div class="form__form__input">
                     <label for="email" class="form__form__input-label">E-MAIL</label>
                     <input class="form__form__input-input" type="text" name="email" id="email">
+                    <p class="form__form__input-error" id="emailError">Introduce un email válido</p>
                 </div>
                 <div class="form__form__policy">
                     <input class="form__form__policy-checkbox" type="checkbox" name="policy" id="policy">
@@ -210,7 +223,7 @@
                         of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and 
                         repealing Directive 95/46/EC (Data Protection Directive)</p>
                 </div>
-                <input class="form__form__button" type="submit" value="Send">
+                <input class="form__form__button" id="submit" type="submit" value="Send">
             </form>
         </section>
     </main>
@@ -228,4 +241,4 @@
     
 </body>
 </html>
-<script src="./js/main.js"></script>
+<script src="./js/main.js" type="module"></script>
