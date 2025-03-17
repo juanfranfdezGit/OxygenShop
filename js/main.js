@@ -4,6 +4,7 @@ import scroller from "./scroller.js";
 import navegation from "./navegation.js";
 import toTop from "./topButton.js";
 import exchange from "./exchange.js";
+import newsletter from "./newsletter.js";
 
 addEventListener("DOMContentLoaded", () => {
     sendForm();
@@ -12,4 +13,5 @@ addEventListener("DOMContentLoaded", () => {
     navegation();
     toTop();
     exchange();
+    newsletter();
 })

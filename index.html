@@ -15,18 +15,19 @@
 
     <div class="scroller"></div>
 
-    <div class="newsletter">
-        <div class="newsletter__modal">
-            <button>X</button>
-            <h2>SUBSCRIBE TO THE NEWSLETTER</h2>
-            <p>Subscribe in our newsletter for 30% discount!</p>
-            <form action="post">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-                <input type="submit" value="Subscribe">
-            </form>
-            <img src="./assets/newsletter.jpg" alt="newsletter image">
-        </div>
+    <div class="newsletter" id="newsletterBack"></div>
+    <div class="newsletter__modal" id="newsletter">
+        <button class="newsletter__modal-close" id="closeButton">X</button>
+        <img src="./assets/newsletter.jpg" alt="newsletter image" class="newsletter__modal-image">
+        <h2 class="newsletter__modal-title">SUBSCRIBE TO THE NEWSLETTER</h2>
+        <p class="newsletter__modal-description">Subscribe in our newsletter for 30% discount!</p>
+        <form action="post" class="newsletter__modal-form" id="newsletterForm">
+            <label for="email" class="newsletter__modal-form--label">Email</label>
+            <input type="text" name="email" class="newsletter__modal-form--input" id="newsletterEmail">
+            <p class="newsletter__modal-form--error" id="newsletterEmailError">Introduce un email válido</p>
+            <input type="submit" value="Subscribe" class="newsletter__modal-form--submit" id="newsletterSubmit">
+        </form>
+        <p class="newsletter__modal-successfull" id="successfullMessage">You have successfully subscribed!</p>
     </div>
 
     <header class="header">

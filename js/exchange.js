@@ -39,7 +39,6 @@ export default function exchange() {
     } 
 
     select.addEventListener("change", (e) => {
-        console.log(e.target.value)
         exchangePrice(e.target.value);
     })
 }
