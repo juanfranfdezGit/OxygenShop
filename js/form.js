@@ -1,8 +1,8 @@
 export default function sendForm() {
-    let sendForm = document.getElementsByClassName("form__form__button")[0];
-    let emailForm = document.getElementById("email");
-    let nameForm = document.getElementById("name");
-    let checkbox = document.getElementById("policy");
+    const sendForm = document.getElementsByClassName("form__form__button")[0];
+    const emailForm = document.getElementById("email");
+    const nameForm = document.getElementById("name");
+    const checkbox = document.getElementById("policy");
 
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const namePattern = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,100}$/;

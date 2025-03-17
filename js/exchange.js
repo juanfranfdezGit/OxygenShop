@@ -1,11 +1,9 @@
 export default function exchange() {    
-    let exchangeRates = []
-    let usdSymbol = document.getElementById("usdSymbol");
-    let eurSymbol = document.getElementById("euroSymbol");
-    let gbpSymbol = document.getElementById("gbpSymbol");
-    let basicPrice = document.getElementById("basicPrice");
-    let profPrice = document.getElementById("profPrice");
-    let premiumPrice = document.getElementById("premiumPrice");
+    let exchangeRates = {}
+    const select = document.getElementById("exchanges");
+    const basicPrice = document.getElementById("basicPrice");
+    const profPrice = document.getElementById("profPrice");
+    const premiumPrice = document.getElementById("premiumPrice");
 
     async function takeChanges() {
         await fetch("https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json")
@@ -22,7 +20,7 @@ export default function exchange() {
 
     takeChanges()
 
-    const priceActual = {
+    const actualPrice = {
         basic: 0,
         prof: 25,
         premium: 60
@@ -35,12 +33,13 @@ export default function exchange() {
     }
 
     function exchangePrice(currency) {
-        basicPrice.innerHTML = symbols[currency]+(priceActual.basic * exchangeRates[currency]).toFixed(0);
-        profPrice.innerHTML = symbols[currency]+(priceActual.prof * exchangeRates[currency]).toFixed(0);
-        premiumPrice.innerHTML = symbols[currency]+(priceActual.premium * exchangeRates[currency]).toFixed(0);
+        basicPrice.innerHTML = symbols[currency]+(actualPrice.basic * exchangeRates[currency]).toFixed(0);
+        profPrice.innerHTML = symbols[currency]+(actualPrice.prof * exchangeRates[currency]).toFixed(0);
+        premiumPrice.innerHTML = symbols[currency]+(actualPrice.premium * exchangeRates[currency]).toFixed(0);
     } 
 
-    usdSymbol.addEventListener("click", () => exchangePrice("usd"))
-    eurSymbol.addEventListener("click", () => exchangePrice("eur"))
-    gbpSymbol.addEventListener("click", () => exchangePrice("gbp"))
+    select.addEventListener("change", (e) => {
+        console.log(e.target.value)
+        exchangePrice(e.target.value);
+    })
 }

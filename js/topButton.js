@@ -1,5 +1,5 @@
 export default function toTop() {
-    let topButton = document.getElementsByClassName("toTopButton")[0];
+    const topButton = document.getElementsByClassName("toTopButton")[0];
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 600) {

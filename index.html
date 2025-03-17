@@ -12,7 +12,22 @@
 <body>
 
     <button class="toTopButton"><img src="assets/upArrow.png" alt="to top"></button>
+
     <div class="scroller"></div>
+
+    <div class="newsletter">
+        <div class="newsletter__modal">
+            <button>X</button>
+            <h2>SUBSCRIBE TO THE NEWSLETTER</h2>
+            <p>Subscribe in our newsletter for 30% discount!</p>
+            <form action="post">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <input type="submit" value="Subscribe">
+            </form>
+            <img src="./assets/newsletter.jpg" alt="newsletter image">
+        </div>
+    </div>
 
     <header class="header">
         <h1 class="header__title">OXYGENShop</h1>
@@ -122,22 +137,19 @@
         <section id="prices" class="pricing">
             <h2 class="pricing__title">Pricing</h2>
             <div class="pricing__exchange">
-                <div id="euroSymbol" class="pricing__exchange-symbolContainer">
-                    <p class="pricing__exchange-symbol">€</p>
-                </div>
-                <div id="usdSymbol" class="pricing__exchange-symbolContainer">
-                    <p class="pricing__exchange-symbol">$</p>
-                </div>
-                <div id="gbpSymbol" class="pricing__exchange-symbolContainer">
-                    <p class="pricing__exchange-symbol">£</p>
-                </div>
+                <!-- PASARLO A SELECT -->
+                 <select name="exchanges" id="exchanges">
+                    <option value="eur">€</option>
+                    <option value="usd">$</option>
+                    <option value="gbp">£</option>
+                 </select>
             </div>
 
             <div class="pricing__cards">
                 <div class="pricing__cards__item">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Basic</h3>
-                        <p id="basicPrice" class="pricing__cards__item__price-number">$0</p>
+                        <p id="basicPrice" class="pricing__cards__item__price-number">€0</p>
                     </div>
                     <div class="pricing__cards__item__info">
                         <ul class="pricing__cards__item__info__list">
@@ -154,7 +166,7 @@
                 <div class="pricing__cards__item pricing__cards__item--primaryColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Professional</h3>
-                        <p id="profPrice" class="pricing__cards__item__price-number">$25</p>
+                        <p id="profPrice" class="pricing__cards__item__price-number">€23</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">
@@ -172,7 +184,7 @@
                 <div class="pricing__cards__item pricing__cards__item--thirdColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Premium</h3>
-                        <p id="premiumPrice" class="pricing__cards__item__price-number">$60</p>
+                        <p id="premiumPrice" class="pricing__cards__item__price-number">€55</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">

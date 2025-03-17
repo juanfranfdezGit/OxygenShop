@@ -1,6 +1,6 @@
 export default function navegation() {
-    let navButtons = document.getElementsByClassName("header__menu-item");
-    let navButtonsMobile = document.getElementsByClassName("header__menu-item--mobile");
+    const navButtons = document.getElementsByClassName("header__menu-item");
+    const navButtonsMobile = document.getElementsByClassName("header__menu-item--mobile");
 
     Array.from(navButtons).forEach(button => {
         button.addEventListener("click", () => {
