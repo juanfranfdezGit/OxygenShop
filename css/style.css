@@ -990,10 +990,10 @@
   justify-content: flex-start;
   transition: all 1s;
 }
-.slider .slider__imgContainer .slides {
+.slider .slider__imgContainer .slider__slides {
   min-width: 100%;
 }
-.slider .slider__imgContainer .slides .slider__imgContainer-item {
+.slider .slider__imgContainer .slider__slides .slider__imgContainer-item {
   width: 100%;
   height: 100%;
 }
