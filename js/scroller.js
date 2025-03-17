@@ -1,5 +1,5 @@
 export default function scroller() {
-    let scroller = document.getElementsByClassName("scroller")[0];
+    const scroller = document.getElementsByClassName("scroller")[0];
 
     
     window.addEventListener("scroll", () => {

@@ -12,7 +12,23 @@
 <body>
 
     <button class="toTopButton"><img src="assets/upArrow.png" alt="to top"></button>
+
     <div class="scroller"></div>
+
+    <div class="newsletter" id="newsletterBack"></div>
+    <div class="newsletter__modal" id="newsletter">
+        <button class="newsletter__modal-close" id="closeButton">X</button>
+        <img src="./assets/newsletter.jpg" alt="newsletter image" class="newsletter__modal-image">
+        <h2 class="newsletter__modal-title">SUBSCRIBE TO THE NEWSLETTER</h2>
+        <p class="newsletter__modal-description">Subscribe in our newsletter for 30% discount!</p>
+        <form action="post" class="newsletter__modal-form" id="newsletterForm">
+            <label for="email" class="newsletter__modal-form--label">Email</label>
+            <input type="text" name="email" class="newsletter__modal-form--input" id="newsletterEmail">
+            <p class="newsletter__modal-form--error" id="newsletterEmailError">Introduce un email válido</p>
+            <input type="submit" value="Subscribe" class="newsletter__modal-form--submit" id="newsletterSubmit">
+        </form>
+        <p class="newsletter__modal-successfull" id="successfullMessage">You have successfully subscribed!</p>
+    </div>
 
     <header class="header">
         <h1 class="header__title">OXYGENShop</h1>
@@ -122,22 +138,19 @@
         <section id="prices" class="pricing">
             <h2 class="pricing__title">Pricing</h2>
             <div class="pricing__exchange">
-                <div id="euroSymbol" class="pricing__exchange-symbolContainer">
-                    <p class="pricing__exchange-symbol">€</p>
-                </div>
-                <div id="usdSymbol" class="pricing__exchange-symbolContainer">
-                    <p class="pricing__exchange-symbol">$</p>
-                </div>
-                <div id="gbpSymbol" class="pricing__exchange-symbolContainer">
-                    <p class="pricing__exchange-symbol">£</p>
-                </div>
+                <!-- PASARLO A SELECT -->
+                 <select name="exchanges" id="exchanges">
+                    <option value="eur">€</option>
+                    <option value="usd">$</option>
+                    <option value="gbp">£</option>
+                 </select>
             </div>
 
             <div class="pricing__cards">
                 <div class="pricing__cards__item">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Basic</h3>
-                        <p id="basicPrice" class="pricing__cards__item__price-number">$0</p>
+                        <p id="basicPrice" class="pricing__cards__item__price-number">€0</p>
                     </div>
                     <div class="pricing__cards__item__info">
                         <ul class="pricing__cards__item__info__list">
@@ -154,7 +167,7 @@
                 <div class="pricing__cards__item pricing__cards__item--primaryColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Professional</h3>
-                        <p id="profPrice" class="pricing__cards__item__price-number">$25</p>
+                        <p id="profPrice" class="pricing__cards__item__price-number">€23</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">
@@ -172,7 +185,7 @@
                 <div class="pricing__cards__item pricing__cards__item--thirdColor">
                     <div class="pricing__cards__item__price">
                         <h3 class="pricing__cards__item__price-plan">Premium</h3>
-                        <p id="premiumPrice" class="pricing__cards__item__price-number">$60</p>
+                        <p id="premiumPrice" class="pricing__cards__item__price-number">€55</p>
                         <span class="pricing__cards__item__price-extra">Limited offer</span>
                     </div>
                     <div class="pricing__cards__item__info">
