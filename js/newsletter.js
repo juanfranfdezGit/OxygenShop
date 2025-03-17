@@ -86,5 +86,13 @@ export default function newsletter() {
         }
     })
 
-    
+    document.addEventListener("keyup", (e) => {
+        if (e.key === "Escape" && status === true) {
+            back.style.display = "none";
+            newsletter.style.display = "none";
+            document.body.style = "overflowY: scroll";
+
+            status = false;
+        }
+    })
 }
