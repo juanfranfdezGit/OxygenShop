@@ -406,6 +406,19 @@
   text-align: center;
   margin-top: 20px;
 }
+.pricing .pricing__exchange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.pricing .pricing__exchange .pricing__exchange-select {
+  width: 100px;
+  padding: 4px;
+  background: #08A6E4;
+  border: 1px solid #fff;
+  color: #fff;
+}
 .pricing .pricing__cards__item {
   width: 293px;
   height: 275px;
@@ -526,17 +539,6 @@
   }
 }
 @media (min-width: 840px) {
-  .pricing .pricing__exchange {
-    width: 10vw;
-    margin-bottom: -40px;
-  }
-  .pricing .pricing__exchange .pricing__exchange-symbolContainer {
-    transition: all 0.5s;
-  }
-  .pricing .pricing__exchange .pricing__exchange-symbolContainer:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
   .pricing .pricing__cards {
     margin: 20px 9vw;
     display: flex;
@@ -984,12 +986,16 @@
   position: absolute;
   left: 0;
   top: 0;
+  display: flex;
+  justify-content: flex-start;
+  transition: all 1s;
 }
-.slider .slider__imgContainer .slider__imgContainer-item {
+.slider .slider__imgContainer .slides {
+  min-width: 100%;
+}
+.slider .slider__imgContainer .slides .slider__imgContainer-item {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: bottom;
 }
 .slider .slider__buttons {
   position: absolute;
@@ -1011,6 +1017,9 @@
   background: #fff;
   box-shadow: 0 0 15px #111;
 }
+.slider .slider__buttons .slider__buttons-item:hover {
+  cursor: pointer;
+}
 .slider .slider__indicators {
   position: absolute;
   left: 50%;
@@ -1021,6 +1030,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
+  transition: all 1s;
 }
 .slider .slider__indicators .slider__indicartors-item {
   width: 16px;
@@ -1042,9 +1052,8 @@
   .slider {
     height: 70vh;
   }
-  .slider .slider__imgContainer .slider__imgContainer-item {
-    object-fit: none;
-    object-position: center;
+  .slider .slider__slides {
+    width: 100%;
   }
   .slider .slider__buttons {
     padding: 2rem;

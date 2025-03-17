@@ -12,12 +12,17 @@
         position: absolute;
         left: 0;
         top: 0;
+        display: flex;
+        justify-content: flex-start;
+        transition: all 1s;
+        
+        .slides {
+            min-width: 100%;
 
-        .slider__imgContainer-item {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: bottom;
+            .slider__imgContainer-item {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 
@@ -40,6 +45,10 @@
             align-items: center;
             background: $white;
             box-shadow: 0 0 15px $black;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -53,6 +62,7 @@
         justify-content: center;
         align-items: center;
         gap: 8px;
+        transition: all 1s;
 
         .slider__indicartors-item {
             width: 16px;
@@ -79,11 +89,8 @@
     .slider {
         height: 70vh;
 
-        .slider__imgContainer {
-            .slider__imgContainer-item {
-                object-fit: none;
-                object-position: center;
-            }
+        .slider__slides {
+            width: 100%;
         }
         
         .slider__buttons {

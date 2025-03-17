@@ -8,6 +8,21 @@
         margin-top: 20px;
     }
 
+    .pricing__exchange {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+
+        .pricing__exchange-select {
+            width: 100px;
+            padding: 4px;
+            background: $primaryColor;
+            border: 1px solid $white;
+            color: $white;
+        }
+    }
+
     .pricing__cards__item {
         width: 293px;
         height: 275px;
@@ -160,20 +175,6 @@
 
 @media (min-width: 840px) {
     .pricing {
-        .pricing__exchange {
-            width: 10vw;
-            margin-bottom: -40px;
-    
-            .pricing__exchange-symbolContainer {
-                transition: all .5s;
-
-                 &:hover {
-                    cursor: pointer;
-                    transform: scale(1.1);
-                 }
-            }
-        }
-
         .pricing__cards {
             margin: 20px 9vw;
             display: flex;

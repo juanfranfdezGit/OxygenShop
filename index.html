@@ -138,8 +138,7 @@
         <section id="prices" class="pricing">
             <h2 class="pricing__title">Pricing</h2>
             <div class="pricing__exchange">
-                <!-- PASARLO A SELECT -->
-                 <select name="exchanges" id="exchanges">
+                 <select class="pricing__exchange-select" name="exchanges" id="exchanges">
                     <option value="eur">€</option>
                     <option value="usd">$</option>
                     <option value="gbp">£</option>
@@ -241,17 +240,17 @@
         </section>
 
         <section class="slider">
-            <div class="slider__imgContainer">
-                <img class="slider__imgContainer-item" src="./assets/slider01.jfif" alt="slider image">
-                <img class="slider__imgContainer-item" src="./assets/slider02.jfif" alt="slider image">
-                <img class="slider__imgContainer-item" src="./assets/slider03.jfif" alt="slider image">
-                <img class="slider__imgContainer-item" src="./assets/slide04.jpg" alt="slider image">
+            <div id="slider" class="slider__imgContainer">
+                <div class="slider__slides"><img class="slider__imgContainer-item" src="./assets/slider01.jfif" alt="slider image"></div>
+                <div class="slider__slides"><img class="slider__imgContainer-item" src="./assets/slider02.jfif" alt="slider image"></div>
+                <div class="slider__slides"><img class="slider__imgContainer-item" src="./assets/slider03.jfif" alt="slider image"></div>
+                <div class="slider__slides"><img class="slider__imgContainer-item" src="./assets/slider04.png" alt="slider image"></div>
             </div>
             <div class="slider__buttons">
-                <img class="slider__buttons-item" src="./assets/leftArrow.png" alt="left arrow">
-                <img class="slider__buttons-item" src="./assets/rightArrow.png" alt=" right arrow">
+                <img id="leftArrow" class="slider__buttons-item" src="./assets/leftArrow.png" alt="left arrow">
+                <img id="rightArrow" class="slider__buttons-item" src="./assets/rightArrow.png" alt=" right arrow">
             </div>
-            <div class="slider__indicators">
+            <div id="indicators" class="slider__indicators">
                 <div class="slider__indicartors-item active"></div>
                 <div class="slider__indicartors-item"></div>
                 <div class="slider__indicartors-item"></div>
