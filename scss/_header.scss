@@ -27,6 +27,19 @@
             border-radius: 8px;
             background: $primaryColor;
             margin-bottom: 3px;
+            transition: all 1s;
+
+            &.hamburguer__allow:first-child {
+                transform: rotate(45deg) translateY(7px);
+            }
+
+            &.hamburguer__allow:nth-child(2) {
+                width: 0;
+            }
+
+            &.hamburguer__allow:nth-child(3) {
+                transform: rotate(-45deg) translateY(-7px);
+            }
         }
     }
 
