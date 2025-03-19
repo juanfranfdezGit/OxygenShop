@@ -1,40 +1,52 @@
-export default function slider() {
-    const slider = document.getElementById("slider"); 
-    const slides = document.getElementsByClassName("slider__slides")
-    const indicators = document.getElementsByClassName("slider__indicartors-item"); 
-    const prevButton = document.getElementById("leftArrow");
-    const nextButton = document.getElementById("rightArrow");
+class Slider {
+    constructor(sliderId, prevButtonId, nextButtonId, slideClass, indicatorClass) {
+        this.slider = document.getElementById(sliderId);
+        this.slides = document.querySelectorAll(`.${slideClass}`);
+        this.indicators = document.querySelectorAll(`.${indicatorClass}`);
+        this.prevButton = document.getElementById(prevButtonId);
+        this.nextButton = document.getElementById(nextButtonId);
+        this.index = 0;
 
-    let index = 0;
+        console.log("prevButton", this.prevButton);
+        console.log("nextButton", this.nextButton);
 
-    function moveImage() { 
-        index++;
+        this.prevButton.addEventListener("click", () => {this.moveImageBack();});
+        this.nextButton.addEventListener("click", () => {this.moveImage();});
 
-        if (index >= slides.length) {
-            index = 0
+        this.activeIndicator();
+    }
+
+    moveImage() {
+        this.index++;
+        
+        if (this.index >= this.slides.length) {
+            this.index = 0;
         }
 
-        slider.style.transform = `translateX(-${index * 100}%)`
-        activeIndicator()
+        this.slider.style.transform = `translateX(-${this.index * 100}%)`;
+
+        this.activeIndicator();
     }
 
-    function moveImageBack() { 
-        index--;
+    moveImageBack() {
+        this.index--;
 
-        if (index < 0) {
-            index = slides.length - 1;
+        if (this.index < 0) {
+            this.index = this.slides.length - 1;
         }
 
-        slider.style.transform = `translateX(-${index * 100}%)`
-        activeIndicator()
+        this.slider.style.transform = `translateX(-${this.index * 100}%)`;
+
+        this.activeIndicator();
     }
 
-    function activeIndicator() {
-        Array.from(indicators).forEach(indicator => indicator.classList.remove("active"))
+    activeIndicator() {
+        this.indicators.forEach(indicator => indicator.classList.remove("active"));
 
-        indicators[index].classList.add("active");
+        if (this.index < this.indicators.length) {
+            this.indicators[this.index].classList.add("active");
+        }
     }
-
-    nextButton.addEventListener("click", () => {moveImage()})
-    prevButton.addEventListener("click", () => {moveImageBack()})
 }
+
+export default Slider;

@@ -25,7 +25,7 @@ export default function newsletter() {
         const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPercent = (scrollTop / windowHeight) * 100;
 
-        if ( status === true && scrollPercent > 25) {
+        if ( status === true && scrollPercent >= 25) {
             back.style.display = "flex";
             newsletter.style.display = "flex";
             document.body.style = "overflow: hidden";
