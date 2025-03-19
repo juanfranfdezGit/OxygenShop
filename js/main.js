@@ -5,7 +5,7 @@ import navegation from "./navegation.js";
 import toTop from "./topButton.js";
 import exchange from "./exchange.js";
 import newsletter from "./newsletter.js";
-import slider from "./slider.js";
+import Slider from './slider.js';
 
 addEventListener("DOMContentLoaded", () => {
     sendForm();
@@ -15,5 +15,6 @@ addEventListener("DOMContentLoaded", () => {
     toTop();
     exchange();
     newsletter();
-    slider();
+
+    new Slider("slider", "leftArrow", "rightArrow", "slider__slides", "slider__indicartors-item");
 })

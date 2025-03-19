@@ -424,10 +424,11 @@
 }
 .pricing .pricing__exchange .pricing__exchange-select {
   width: 100px;
-  padding: 4px;
+  padding: 12px 16px;
   background: #08A6E4;
   border: 1px solid #fff;
   color: #fff;
+  box-shadow: 0 0 5px #111;
 }
 .pricing .pricing__cards__item {
   width: 293px;
@@ -577,7 +578,7 @@
   }
 }
 .form {
-  margin: 0 30px;
+  margin: 12vh 30px 16vh;
 }
 .form .form__info .form__info-title {
   font-size: 40px;
