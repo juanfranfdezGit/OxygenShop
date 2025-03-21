@@ -14,6 +14,13 @@ class Slider {
         this.nextButton.addEventListener("click", () => {this.moveImage();});
 
         this.activeIndicator();
+        this.startAutoSlide();
+    }
+
+    startAutoSlide() {
+        this.interval = setInterval(() => {
+            this.moveImage();
+        }, 3000);
     }
 
     moveImage() {
