@@ -1,6 +1,6 @@
 # OxygenShop
 
-OxygenShop is an academic project designed as an online store, built with clean and structured code. The goal is to apply best practices in web development, ensuring semantic correctness and maintainability. The project is currently focused on the foundation of the store, with plans to expand and add additional functionalities in the future.
+OxygenShop is an academic project designed as an online store, built with clean and structured code. The goal is to apply best practices in web development, ensuring semantic correctness and maintainability.
 
 ## Technologies and Methodologies
 
