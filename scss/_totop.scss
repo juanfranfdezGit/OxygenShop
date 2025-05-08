@@ -1,0 +1,43 @@
+.toTopButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 4vh;
+    right: -6vw;
+    width: 4rem;
+    height: 4rem;
+    background: $white;
+    border: none;
+    border: 1px solid $grey;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 1px $black;
+    opacity: .6;
+    transition: all .5s;
+    z-index: 20;
+
+    img {
+        position: relative;
+        bottom: 1px;
+        width: 50%;
+        height: 50%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 1px $black;
+        opacity: 1;
+    }
+}
+
+.toTopButton.active {
+    right: 2vw;
+}
+
+
+@media (max-width: 440px) {
+    .toTopButton {
+        display: none;
+    }
+}

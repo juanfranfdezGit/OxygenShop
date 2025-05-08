@@ -1,4 +1,5 @@
-@import '_mixin';
+@use '_variables.scss';
+@use '_mixin.scss';
 
 .popular {
     margin-bottom: 14vh;

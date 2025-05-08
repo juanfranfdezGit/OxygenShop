@@ -1,13 +1,14 @@
-@import '_variables.scss';
-@import '_header.scss';
-@import '_hero.scss';
-@import '_popular.scss';
-@import '_cards.scss';
-@import '_pricing.scss';
-@import '_form.scss';
-@import '_footer.scss';
-@import '_newsletter.scss';
-@import '_slider.scss';
+@use '_variables.scss';
+@use '_header.scss';
+@use '_hero.scss';
+@use '_popular.scss';
+@use '_cards.scss';
+@use '_pricing.scss';
+@use '_form.scss';
+@use '_footer.scss';
+@use '_newsletter.scss';
+@use '_slider.scss';
+@use '_totop.scss';
 
 * {
     margin: 0;
@@ -33,50 +34,6 @@ li {
 a {
     text-decoration: none;
     text-transform: uppercase;
-}
-
-.toTopButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 4vh;
-    right: -6vw;
-    width: 4rem;
-    height: 4rem;
-    background: $white;
-    border: none;
-    border: 1px solid $grey;
-    border-radius: 50%;
-    box-shadow: 0 0 8px 1px $black;
-    opacity: .6;
-    transition: all .5s;
-    z-index: 20;
-
-    img {
-        position: relative;
-        bottom: 1px;
-        width: 50%;
-        height: 50%;
-    }
-
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        box-shadow: 0 0 10px 1px $black;
-        opacity: 1;
-    }
-}
-
-.toTopButton.active {
-    right: 2vw;
-}
-
-
-@media (max-width: 440px) {
-    .toTopButton {
-        display: none;
-    }
 }
 
 .scroller {

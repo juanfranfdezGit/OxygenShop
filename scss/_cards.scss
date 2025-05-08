@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_mixin';
+@use '_variables.scss';
+@use '_mixin.scss';
 
 .cards {
     background: #f7f7f7;

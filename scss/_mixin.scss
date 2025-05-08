@@ -9,3 +9,10 @@
 @mixin set-color($color) {
     color: $color;
 }
+
+@mixin font($size, $weight, $color, $height) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    line-height: $height;
+}
