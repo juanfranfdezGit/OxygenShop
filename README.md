@@ -38,7 +38,3 @@ Follow these steps to install and run the project on your local environment:
    sass assets/css/styles.scss assets/css/styles.css
    ```
 5. Open `index.html` in your browser or use a local server extension to see real-time changes.
-
----
-
-💡 **Note:** This is a work in progress. Any contributions or suggestions are welcome! 🚀
