@@ -2,7 +2,7 @@
 
 OxygenShop is an academic project designed as an online store, built with clean and structured code. The goal is to apply best practices in web development, ensuring semantic correctness and maintainability.
 
-## Technologies and Methodologies
+## Technologies
 
 ### 📐 HTML 
 - Follows the **BEM (Block, Element, Modifier)** methodology for a clear and scalable architecture.
